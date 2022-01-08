@@ -15,9 +15,9 @@ public class MovieappApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(MovieappApplication.class, args);
-		System.out.println(context.getBeanDefinitionCount());
+		/*System.out.println(context.getBeanDefinitionCount());
 		System.out.println(Arrays.stream(context.getBeanDefinitionNames()).collect(Collectors.toList()).contains("myService"));
-		System.out.println("Hello Team");
+		System.out.println("Hello Team");*/
 	}
 
 	@RequestMapping("/")
