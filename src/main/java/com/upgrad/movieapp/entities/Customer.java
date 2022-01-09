@@ -1,7 +1,6 @@
 package com.upgrad.movieapp.entities;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Customer")
@@ -23,8 +22,6 @@ public class Customer {
     @Column(length = 20 , nullable = false)
     private String password;
 
-    @Column(nullable = false)
-    private LocalDateTime dateOfBirth;
 
     public int getCustomerId() {
         return customerId;
@@ -66,13 +63,6 @@ public class Customer {
         this.password = password;
     }
 
-    public LocalDateTime getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(LocalDateTime dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
 
     @Override
     public String toString() {
@@ -82,7 +72,6 @@ public class Customer {
                 ", lastName='" + lastName + '\'' +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
                 '}';
     }
 }
