@@ -44,8 +44,11 @@ public class MovieappApplication {
 	public String greetStudents(){
 
 		Customer customer = customerDao.findById(1);
+		customer.setFirstName("Lets test it");
+		customerDao.update(customer);
+		customer =  customerDao.findById(1);
 
-		return "Hello " + customer.getUserName() + ", Welcome to Spring Boot...";
+		return "Hello " + customer + ", Welcome to Spring Boot...";
 	}
 
 }
