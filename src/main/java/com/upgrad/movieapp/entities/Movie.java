@@ -15,16 +15,22 @@ public class Movie {
     @Column(length = 25, nullable = false)
     String movie_name;
 
+    @Column(length = 256, nullable = false)
     String movie_desc;
 
+    @Column(nullable = false)
     LocalDate release_date;
 
+    @Column( nullable = false)
     int duration;
 
+    @Column( nullable = true)
     String cover_photo_url;
 
+    @Column( nullable = true)
     String trailer_url;
 
+    @Column( nullable = false)
     int status_id;
 
 
