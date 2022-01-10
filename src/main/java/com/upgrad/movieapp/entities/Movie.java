@@ -13,7 +13,7 @@ public class Movie {
     int movie_id;
 
     @Column(length = 25, nullable = false)
-    String movie_name;
+    String movieName;
 
     @Column(length = 256, nullable = false)
     String movie_desc;
@@ -42,12 +42,12 @@ public class Movie {
         this.movie_id = movie_id;
     }
 
-    public String getMovie_name() {
-        return movie_name;
+    public String getMovieName() {
+        return movieName;
     }
 
-    public void setMovie_name(String movie_name) {
-        this.movie_name = movie_name;
+    public void setMovieName(String movie_name) {
+        this.movieName = movie_name;
     }
 
     public String getMovie_desc() {
