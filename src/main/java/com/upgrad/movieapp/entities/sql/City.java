@@ -15,7 +15,7 @@ public class City {
     @Column(length = 20,nullable = false)
     private String cityName;
 
-    @OneToMany(mappedBy = "city", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "city", fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     private Set<Theatre> theatres;
 
     public int getCityId() {
