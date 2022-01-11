@@ -6,6 +6,7 @@ import com.upgrad.movieapp.dao.sql.springorm.MovieDao;
 import com.upgrad.movieapp.entities.sql.Customer;
 import com.upgrad.movieapp.entities.mongo.CustomerMongoEnitity;
 import com.upgrad.movieapp.entities.sql.Movie;
+import com.upgrad.movieapp.services.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,10 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @RestController
 @SpringBootApplication
 public class MovieappApplication implements CommandLineRunner {
+
+	@Autowired
+	MovieService movieService;
 
 	@Autowired
 	CustomerDao customerDao;
@@ -81,6 +86,11 @@ public class MovieappApplication implements CommandLineRunner {
 		movie.setDuration(250);
 		Movie moviewUpdated = movieDao.save(movie);
 		return "Hello Movie Id " + moviewUpdated.getMovie_id() + ", Welcome to Spring Boot... " + " Moview Duration " + moviewUpdated.getDuration();
+	}
+
+	@RequestMapping("/getAllMovies")
+	public List<Movie> getAllMovies(){
+		return movieService.getAllMovies();
 	}
 
 	@Override
