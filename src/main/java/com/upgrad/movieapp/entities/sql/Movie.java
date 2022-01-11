@@ -1,8 +1,8 @@
-package com.upgrad.movieapp.entities;
+package com.upgrad.movieapp.entities.sql;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "Movie")
@@ -32,6 +32,9 @@ public class Movie {
 
     @Column( nullable = false)
     int status_id;
+
+    @ManyToMany
+    private Set<Theatre> theatres;
 
 
     public int getMovie_id() {
@@ -96,5 +99,28 @@ public class Movie {
 
     public void setStatus_id(int status_id) {
         this.status_id = status_id;
+    }
+
+    public Set<Theatre> getTheatres() {
+        return theatres;
+    }
+
+    public void setTheatres(Set<Theatre> theatres) {
+        this.theatres = theatres;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "movie_id=" + movie_id +
+                ", movieName='" + movieName + '\'' +
+                ", movie_desc='" + movie_desc + '\'' +
+                ", release_date=" + release_date +
+                ", duration=" + duration +
+                ", cover_photo_url='" + cover_photo_url + '\'' +
+                ", trailer_url='" + trailer_url + '\'' +
+                ", status_id=" + status_id +
+                ", theatres=" + theatres +
+                '}';
     }
 }

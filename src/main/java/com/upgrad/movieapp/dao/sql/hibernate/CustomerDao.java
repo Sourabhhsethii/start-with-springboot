@@ -1,6 +1,6 @@
-package com.upgrad.movieapp.dao;
+package com.upgrad.movieapp.dao.sql.hibernate;
 
-import com.upgrad.movieapp.entities.Customer;
+import com.upgrad.movieapp.entities.sql.Customer;
 
 public interface CustomerDao {
 

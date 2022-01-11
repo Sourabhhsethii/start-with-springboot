@@ -1,11 +1,11 @@
 package com.upgrad;
 
-import com.upgrad.movieapp.dao.CustomerDao;
-import com.upgrad.movieapp.dao.CustomerRepository;
-import com.upgrad.movieapp.dao.MovieDao;
-import com.upgrad.movieapp.entities.Customer;
-import com.upgrad.movieapp.entities.CustomerMongoEnitity;
-import com.upgrad.movieapp.entities.Movie;
+import com.upgrad.movieapp.dao.sql.hibernate.CustomerDao;
+import com.upgrad.movieapp.dao.mongo.CustomerRepository;
+import com.upgrad.movieapp.dao.sql.springorm.MovieDao;
+import com.upgrad.movieapp.entities.sql.Customer;
+import com.upgrad.movieapp.entities.mongo.CustomerMongoEnitity;
+import com.upgrad.movieapp.entities.sql.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

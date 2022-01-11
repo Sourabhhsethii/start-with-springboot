@@ -1,9 +1,7 @@
-package com.upgrad.movieapp.dao;
+package com.upgrad.movieapp.dao.sql.springorm;
 
-import com.upgrad.movieapp.entities.Movie;
+import com.upgrad.movieapp.entities.sql.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Optional;
 
 public interface MovieDao extends JpaRepository<Movie,Integer> {
 

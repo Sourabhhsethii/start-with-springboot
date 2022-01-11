@@ -1,7 +1,6 @@
-package com.upgrad.movieapp.dao;
+package com.upgrad.movieapp.dao.mongo;
 
-import com.upgrad.movieapp.entities.Customer;
-import com.upgrad.movieapp.entities.CustomerMongoEnitity;
+import com.upgrad.movieapp.entities.mongo.CustomerMongoEnitity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

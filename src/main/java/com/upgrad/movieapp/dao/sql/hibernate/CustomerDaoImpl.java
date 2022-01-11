@@ -1,11 +1,9 @@
-package com.upgrad.movieapp.dao;
+package com.upgrad.movieapp.dao.sql.hibernate;
 
-import com.upgrad.movieapp.entities.Customer;
+import com.upgrad.movieapp.entities.sql.Customer;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.criterion.Example;
-import org.hibernate.criterion.MatchMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

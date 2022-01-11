@@ -1,27 +1,30 @@
-package com.upgrad.movieapp.entities;
+package com.upgrad.movieapp.entities.mongo;
 
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
 
-@Entity
-@Table(name = "Customer")
-public class Customer {
+import java.time.LocalDateTime;
+
+public class CustomerMongoEnitity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int customerId;
-
-    @Column(name = "first_name", length = 20, nullable = false)
     private String firstName;
-
-    @Column(length = 20)
     private String lastName;
-
-    @Column(length = 20 , nullable = false, unique = true)
     private String userName;
-
-    @Column(length = 20 , nullable = false)
     private String password;
+    private LocalDateTime dateofBirth;
 
+    public CustomerMongoEnitity() {
+    }
+
+    public CustomerMongoEnitity(int customerId, String firstName, String lastName, String userName, String password, LocalDateTime dateofBirth) {
+        this.customerId = customerId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.password = password;
+        this.dateofBirth = dateofBirth;
+    }
 
     public int getCustomerId() {
         return customerId;
@@ -63,15 +66,23 @@ public class Customer {
         this.password = password;
     }
 
+    public LocalDateTime getDateofBirth() {
+        return dateofBirth;
+    }
+
+    public void setDateofBirth(LocalDateTime dateofBirth) {
+        this.dateofBirth = dateofBirth;
+    }
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "CustomerMongoEnitity{" +
                 "customerId=" + customerId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
+                ", dateofBirth=" + dateofBirth +
                 '}';
     }
 }
